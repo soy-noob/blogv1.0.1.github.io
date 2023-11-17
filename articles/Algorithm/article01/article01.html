@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"/>
+    <title>八大排序算法冒——泡排序算法详解</title>
+    <link rel="stylesheet" href="../../articleStyle.css">
+    <link rel="stylesheet" href="../../codeStyle.css">
+    <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="fireworkBg"></div>
+    <div class="modeBg"><div class="mode" id="modeBtn"></div></div>
+    <div class="titleBg" id="titleBg">
+        <div class="title" id="title">八大排序算法——冒泡排序算法详解</div>    
+    </div>
+    <div class="date">
+        2023/11/17
+    </div>
+    <div class="articleBg" id="articleBg">
+        <div class="articleContent" id="content">
+            <div class="midP" style="font-weight: 600;">引言</div>
+            <div class="smallP" style="padding-top: 1vw;padding-bottom: 1vw;">当我们需要处理一个无序数字数组时，我们首先需要对它进行排序，这时候就需要使用排序算法。那么常见的排序算法有八种，被称为八大排序算法。今天要讲的就是其中最慢但是最容易理解的排序——冒泡排序。</div>
+            <div class="smallP" style="padding-top: 1vw;padding-bottom: 1vw;">首先，为什么叫冒泡排序？因为冒泡排序的本质就是每次将一个大的数字往后运，很像烧水烧开时向上冒的泡泡，越冒越大，很形象吧。</div>
+            <div class="smallP" style="padding-top: 1vw;padding-bottom: 1vw;">其次，判断一个算法的效率最直观的就是时间复杂度了，那么冒泡排序的时间复杂度是多少呢，是可怕的O(n²)，了解算法的应该知道这有多慢了。所以建议在刷题时尽量不要使用冒泡排序，很容易超时。</div>
+            <div style="width: 100%;height: 3vw;"></div>
+            <div class="smallP" style="padding-top: 1vw;padding-bottom: 1vw;">接下来就详细的讲解一下冒泡排序的逻辑吧。</div>
+            <div class="smallP" style="padding-top: 1vw;padding-bottom: 1vw;">第一步，将数组的第一个数字和后一个进行对比，如果后一个数字小于前一个数字则交换，否则就跳过。</div>
+            <div class="smallP" style="padding-top: 1vw;padding-bottom: 1vw;">第二步，将数组的第二个数字和后一个进行对比，同上。</div>
+            <div class="smallP" style="padding-top: 1vw;padding-bottom: 1vw;">以此类推，直到数组的倒数第二个数字。至此，第一轮循环就结束了。此时最后一个数字就是数组中最大的数字，可以不用参与接下来的比较了，因此下一轮排序的数字数量可以减一。</div>
+            <div style="width: 100%;height: 2vw;"></div>
+            <div class="smallP" style="padding-left: 3vw;font-weight: 600;  padding-top: 1vw;padding-bottom: 1vw;">以下是图解</div>
+            <img src="./冒泡1.png" style="padding-top: 1vw;padding-bottom: 1vw;  position: relative;left: 10%;width: 80%;">
+            <img src="./冒泡2.png" style="padding-top: 1vw;padding-bottom: 1vw;  position: relative;left: 10%;width: 80%;">
+            <img src="./冒泡3.png" style="padding-top: 1vw;padding-bottom: 1vw;  position: relative;left: 10%;width: 80%;">
+            <img src="./冒泡4.png" style="padding-top: 1vw;padding-bottom: 1vw;  position: relative;left: 10%;width: 80%;">
+            <img src="./冒泡5.png" style="padding-top: 1vw;padding-bottom: 1vw;  position: relative;left: 10%;width: 80%;">
+            <img src="./冒泡6.png" style="padding-top: 1vw;padding-bottom: 1vw;  position: relative;left: 10%;width: 80%;">
+            <img src="./冒泡7.png" style="padding-top: 1vw;padding-bottom: 1vw;  position: relative;left: 10%;width: 80%;">
+            <img src="./冒泡8.png" style="padding-top: 1vw;padding-bottom: 1vw;  position: relative;left: 10%;width: 80%;">
+            <div style="width: 100%;height: 2vw;"></div>
+            <div class="smallP">以上就是一轮冒泡排序的步骤了，是不是很慢，这么多步才排好了一个数字。因此冒泡排序被称为“算法之耻”</div>
+            <div style="width: 100%;height: 3vw;"></div>
+            <div class="midP">下面是冒泡排序的C++写法</div>
+            <div style="width: 100%;height: 1vw;"></div>
+            <pre style=" width: 100%;background-color: rgba(245, 255, 154,0.3)">
+                <code>
+<span class="code-head">    1 </span><span class="code-headLine">   |  </span><span class="code-keyword">#include</span> <span class="code-string">&lt;iostream&gt;</span>
+<span class="code-head">    2 </span><span class="code-headLine">   |  </span>
+<span class="code-head">    3 </span><span class="code-headLine">   |  </span><span class="code-keyword">int</span> <span class="code-variable">main</span><span class="code-string">() &#123;</span>
+<span class="code-head">    4 </span><span class="code-headLine">   |  </span>      <span class="code-keyword">vector</span><span class="code-string">&lt;</span><span class="code-keyword">int</span><span class="code-string">&gt;</span> <span class="code-variable">nums</span><span class="code-string"> = &#123;</span><span class="code-number">8</span><span class="code-string">,</span><span class="code-number">4</span><span class="code-string">,</span><span class="code-number">15</span><span class="code-string">,</span><span class="code-number">32</span><span class="code-string">,</span><span class="code-number">1</span><span class="code-string">,</span><span class="code-number">9</span><span class="code-string">&#125;;</span>
+<span class="code-head">    5 </span><span class="code-headLine">   |  </span>      <span class="code-keyword">int</span> <span class="code-variable">sortedNum</span><span class="code-string">=</span><span class="code-number">0</span><span class="code-string">;</span>
+<span class="code-head">    6 </span><span class="code-headLine">   |  </span>      <span class="code-keyword">for</span><span class="code-string">(</span><span class="code-keyword">int</span> <span class="code-variable">a</span><span class="code-string">=</span><span class="code-number">0</span><span class="code-string">;</span> <span class="code-variable">a</span><span class="code-string"><</span><span class="code-variable">nums</span><span class="code-string">.size();</span> <span class="code-variable">a</span><span class="code-string">++){</span>
+<span class="code-head">    7 </span><span class="code-headLine">   |  </span>            <span class="code-keyword">for</span><span class="code-string">(</span><span class="code-keyword">int</span> <span class="code-variable">b</span><span class="code-string">=</span><span class="code-number">0</span><span class="code-string">;</span> <span class="code-variable">b</span><span class="code-string"><</span><span class="code-variable">nums</span><span class="code-string">.size()-</span><span class="code-number">1</span><span class="code-string">-</span><span class="code-variable">sortedNum</span><span class="code-string">;</span>  <span class="code-variable">b</span><span class="code-string">++){</span>
+<span class="code-head">    8 </span><span class="code-headLine">   |  </span>                  <span class="code-keyword">if</span><span class="code-string">(</span><span class="code-variable">nums</span><span class="code-string">[</span><span class="code-variable">b</span><span class="code-string">]></span><span class="code-variable">nums</span><span class="code-string">[</span><span class="code-variable">b</span><span class="code-string">+</span><span class="code-number">1</span><span class="code-string">]){</span>
+<span class="code-head">    9 </span><span class="code-headLine">   |  </span>                        <span class="code-keyword">int</span> <span class="code-variable">temp</span> <span class="code-string">=</span> <span class="code-variable">nums</span><span class="code-string">[</span><span class="code-variable">b</span><span class="code-string">+</span><span class="code-number">1</span><span class="code-string">];</span>
+<span class="code-head">  10 </span><span class="code-headLine">   |  </span>                        <span class="code-variable">nums</span><span class="code-string">[</span><span class="code-variable">b</span><span class="code-string">+</span><span class="code-number">1</span><span class="code-string">] = </span><span class="code-variable">nums</span><span class="code-string">[</span><span class="code-variable">b</span><span class="code-string">];</span>
+<span class="code-head">  11 </span><span class="code-headLine">   |  </span>                        <span class="code-variable">nums</span><span class="code-string">[</span><span class="code-variable">b</span><span class="code-string">] = </span><span class="code-variable">temp</span><span class="code-string">;</span>
+<span class="code-head">  12 </span><span class="code-headLine">   |  </span>                  <span class="code-string">}</span>
+<span class="code-head">  13 </span><span class="code-headLine">   |  </span>            <span class="code-string">}</span>
+<span class="code-head">  14 </span><span class="code-headLine">   |  </span>            <span class="code-variable">sortedNum</span><span class="code-string">++;</span>
+<span class="code-head">  15 </span><span class="code-headLine">   |  </span>      <span class="code-string">}</span>
+<span class="code-head">  16 </span><span class="code-headLine">   |  </span>      <span class="code-keyword">return</span> <span class="code-number">0</span><span class="code-string">;</span>
+<span class="code-head">  17 </span><span class="code-headLine">   |  </span><span class="code-string">}</span>
+                </code>
+            </pre>
+            <div style="width: 100%;height: 3vw;"></div>
+            <div class="smallP">至此冒泡排序讲的差不多了，快打开编辑器试试吧。</div>
+        </div>
+    </div>
+    <div class="foot">
+
+    </div>
+    <div class="home">
+        返回主页
+    </div>
+</body>
+<script src="../../utils.js" type="module"></script>
+<script src="../../articleCommon.js"></script>
+</html>

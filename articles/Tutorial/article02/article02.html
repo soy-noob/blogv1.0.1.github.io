@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"/>
+    <title>使用Github部署静态网站教程</title>
+    <link rel="stylesheet" href="../../articleStyle.css">
+    <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="fireworkBg"></div>
+    <div class="modeBg"><div class="mode" id="modeBtn"></div></div>
+    <div class="titleBg" id="titleBg">
+        <div class="title" id="title">使用Github部署静态网站教程</div>    
+    </div>
+    <div class="date">
+        2023/11/17
+    </div>
+    <div class="articleBg" id="articleBg">
+        <div class="articleContent" id="content">
+            <div class="smallP" style="padding-top: 1vw;padding-bottom: 1vw;">自己的小网站终于写好了，想上传到网上分享给小伙伴们，但是不知道该怎么做。目前有很多部署静态网站的方法，例如Vercel，GitHub Pages等。</div>
+            <div class="smallP" style="padding-top: 1vw;padding-bottom: 1vw;">今天介绍一下使用GitHub Pages部署静态网站</div>
+            <div style="width: 100%;height: 3vw;"></div>
+            <div class="midP">1、准备文件</div>
+            <div class="smallP" style="padding-left: 3vw;">准备基础的前端三件套，并放置在同一个文件夹下。</div>
+            <img src="./准备文件.png" style="position: relative; left: 10%; width: 80%;padding-top: 1vw;padding-bottom: 1vw;">
+            <div style="width: 100%;height: 3vw;"></div>
+            <div class="midP">2、新建仓库</div>
+            <div class="smallP" style="padding-left: 3vw;">打开Github，登陆后点击左侧的New</div>
+            <img src="./新建仓库1.png" style="position: relative; left: 20%; width: 60%;padding-top: 1vw;padding-bottom: 1vw;">
+            <div class="smallP" style="padding-left: 3vw;padding-top: 0.5vw;padding-bottom: 0.5vw;">在新窗口中的Repository name栏中输入仓库名（注意格式为"名字.github.io"）。</div>
+            <div class="smallP" style="padding-left: 3vw;padding-top: 0.5vw;padding-bottom: 0.5vw;">然后选择Public，否则其他人访问不了你的网站。</div>
+            <div class="smallP" style="padding-left: 3vw;padding-top: 0.5vw;padding-bottom: 0.5vw;">README文件可选择是否添加。</div>
+            <div class="smallP" style="padding-left: 3vw;padding-top: 0.5vw;padding-bottom: 0.5vw;">然后点击Create repository创建仓库</div>
+            <img src="./新建仓库2.png" style="position: relative; left: 20%; width: 60%;padding-top: 1vw;padding-bottom: 1vw;">
+            <div style="width: 100%;height: 3vw;"></div>
+            <div class="midP">3、添加文件</div>
+            <div class="smallP" style="padding-left: 3vw;">在新窗口中点击uploading an existing file</div>
+            <img src="./添加文件.png" style="position: relative; left: 10%; width: 80%;padding-top: 1vw;padding-bottom: 1vw;">
+            <div class="smallP" style="padding-left: 3vw;">在新窗口中点击choose your files或者拖拽文件到方框中上传网站文件</div>
+            <img src="./上传文件.png" style="position: relative; left: 10%; width: 80%;padding-top: 1vw;padding-bottom: 1vw;">
+            <div class="smallP" style="padding-left: 3vw;">等文件全部上传后点击commit changes保存更改</div>
+            <img src="./保存文件.png" style="position: relative; left: 10%; width: 80%;padding-top: 1vw;padding-bottom: 1vw;">
+            <div class="midP">4、测试结果</div>
+            <div class="smallP" style="padding-left: 3vw;">由于网络问题，可能需要等待一段时间（几分钟到十几分钟）。然后点击页面的settings进入设置页面</div>
+            <img src="./打开设置.png" style="position: relative; left: 10%; width: 80%;padding-top: 1vw;padding-bottom: 1vw;">
+            <div class="smallP" style="padding-left: 3vw;">在设置界面中点击Pages，然后最上方Github Pages下的那一串网址就是你网站的网址了，点击右侧的Visit site可以访问你的网站</div>
+            <img src="./测试结果.png" style="position: relative; left: 10%; width: 80%;padding-top: 1vw;padding-bottom: 1vw;">
+            <div class="smallP" style="padding-left: 3vw;">效果展示</div>
+            <img src="./结果.png" style="position: relative; left: 10%; width: 80%;padding-top: 1vw;padding-bottom: 1vw;">
+            <div style="width: 100%;height: 3vw;"></div>
+            <div class="smallP" style="padding-top: 1vw;padding-bottom: 1vw;">至此你的小网站就部署完毕了，接下来可以分享给你的小伙伴炫耀了:)</div>
+        </div>
+    </div>
+    <div class="foot">
+
+    </div>
+    <div class="home">
+        返回主页
+    </div>
+</body>
+<script src="../../utils.js" type="module"></script>
+<script src="../../articleCommon.js"></script>
+</html>

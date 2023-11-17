@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"/>
+    <title>极限知识点（四）、极限存在定理</title>
+    <link rel="stylesheet" href="../../articleStyle.css">
+    <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="fireworkBg"></div>
+    <div class="modeBg"><div class="mode" id="modeBtn"></div></div>
+    <div class="titleBg" id="titleBg">
+        <div class="title" id="title">极限知识点（四）、极限存在定理</div>    
+    </div>
+    <div class="date">
+        2023/11/17
+    </div>
+    <div class="articleBg" id="articleBg">
+        <div class="articleContent" id="content">
+            <div class="largeP" style="font-weight: 600;">一、夹逼准则</div>
+            <div class="midP" style="padding-top: 2vw;padding-bottom: 2vw; font-weight: 600;padding-inline: 3vw;">原理</div>
+            <img src="./夹逼定义.png" style="width: 80%;left: 10%;position: relative;padding-top: 1vw;padding-bottom: 1vw;">
+            <div class="midP" style="padding-top: 2vw;padding-bottom: 2vw; font-weight: 600;padding-inline: 3vw;">难点</div>
+            <div class="smallP" style="padding-inline: 6vw;color: red;">找到两端的函数</div>
+            <div class="midP" style="font-weight: 600; padding-top: 1vw;padding-bottom: 1vw;padding-inline: 3vw;">例1</div>
+            <img src="./夹逼例1.png" style="position: relative;left: 5%;width: 90%;">
+            <img src="./夹逼例1答案.png" style="position: relative;left: 5%;width: 90%;">
+            <div style="width: 100%;height: 3vw;"></div>
+            <div class="largeP" style="font-weight: 600;">二、单调有界准则</div>
+            <div class="midP" style="padding-top: 2vw;padding-bottom: 2vw; font-weight: 600;padding-inline: 3vw;">原理</div>
+            <div class="smallP" style="padding-inline: 6vw;font-weight: 600;">单调性</div>
+            <div class="smallP" style="padding-inline: 8vw;padding-top: 1vw;padding-bottom: 1vw;">对任一数列{xn}，如果从某一项xk开始，满足</div>
+            <img src="./单调性1.svg" style="padding-top: 2vw;padding-bottom: 2vw; position: relative;left: 20%;width: 60%;">
+            <div class="smallP" style="padding-inline: 8vw;padding-top: 1vw;padding-bottom: 1vw;">则称数列（从第k项开始）是单调递增的。特别地，如果上式全部取小于号，则称数列是严格单调递增的。</div>
+            <div class="smallP" style="padding-inline: 8vw;padding-top: 1vw;padding-bottom: 1vw;">同样地，如果从某一项k开始，满足</div>
+            <img src="./单调性2.svg" style="padding-top: 2vw;padding-bottom: 2vw; position: relative;left: 20%;width: 60%;">
+            <div class="smallP" style="padding-inline: 8vw;padding-top: 1vw;padding-bottom: 1vw;">则称数列（从第k项开始）是单调递减的。特别地，如果上式全部取大于号，则称数列是严格单调递减的。</div>
+            <div class="smallP" style="padding-inline: 8vw;padding-top: 1vw;padding-bottom: 1vw;">单调递增数列和单调递减数列统称单调数列。</div>
+            <div class="smallP" style="padding-inline: 6vw;font-weight: 600;">有界性</div>
+            <div class="smallP" style="padding-inline: 8vw;padding-top: 1vw;padding-bottom: 1vw;">对任一数列{xn}，如果存在某个实数A使数列的所有项都满足不等式</div>
+            <img src="./有界性1.svg" style="padding-top: 2vw;padding-bottom: 2vw; position: relative;left: 40%;width: 20%;">
+            <div class="smallP" style="padding-inline: 8vw;padding-top: 1vw;padding-bottom: 1vw;">恒成立，即∃A，使得</div>
+            <img src="./有界性2.svg" style="padding-top: 2vw;padding-bottom: 2vw; position: relative;left: 30%;width: 40%;">
+            <div class="smallP" style="padding-inline: 8vw;padding-top: 1vw;padding-bottom: 1vw;">则称这个数列是有下界的，实数A是数列的一个下界，记做</div>
+            <img src="./有界性3.svg" style="padding-top: 2vw;padding-bottom: 2vw; position: relative;left: 30%;width: 40%;">
+            <div class="smallP" style="padding-inline: 8vw;padding-top: 1vw;padding-bottom: 1vw;">同样地，如果存在某个实数B使数列的所有项都满足不等式</div>
+            <img src="./有界性4.svg" style="padding-top: 2vw;padding-bottom: 2vw; position: relative;left: 40%;width: 20%;">
+            <div class="smallP" style="padding-inline: 8vw;padding-top: 1vw;padding-bottom: 1vw;">恒成立，即∃B，使得</div>
+            <img src="./有界性5.svg" style="padding-top: 2vw;padding-bottom: 2vw; position: relative;left: 30%;width: 40%;">
+            <div class="smallP" style="padding-inline: 8vw;padding-top: 1vw;padding-bottom: 1vw;">则称这个数列是有上界的，实数B是数列的一个上界</div>
+            <div class="smallP" style="padding-inline: 8vw;padding-top: 1vw;padding-bottom: 1vw;">如果一个数列既有上界又有下界，则称这个数列是有界的。此时，存在一个正数M，使不等式</div>
+            <img src="./有界性6.svg" style="padding-top: 2vw;padding-bottom: 2vw; position: relative;left: 40%;width: 20%;">
+            <div class="smallP" style="padding-inline: 8vw;padding-top: 1vw;padding-bottom: 1vw;">成立</div>
+            <div class="midP" style="padding-top: 2vw;padding-bottom: 2vw; font-weight: 600;padding-inline: 3vw;">难点</div>
+            <div class="smallP" style="padding-inline: 6vw;color: red;">数学归纳法证明单调性</div>
+            <div class="midP" style="font-weight: 600; padding-top: 1vw;padding-bottom: 1vw;padding-inline: 3vw;">例1</div>
+            <img src="./数学归纳法.png" style="position: relative;left: 5%;width: 90%;">
+            <img src="./数学归纳法答案.png" style="position: relative;left: 5%;width: 90%;">
+
+
+        </div>
+    </div>
+    <div class="foot">
+
+    </div>
+    <div class="home">
+        返回主页
+    </div>
+</body>
+<script src="../../utils.js" type="module"></script>
+<script src="../../articleCommon.js"></script>
+<script src="./script01.js" type="module"></script>
+</html>

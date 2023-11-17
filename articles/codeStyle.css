@@ -1,0 +1,32 @@
+code span{
+}
+.code-string{
+    letter-spacing: 1px;
+    color: rgb(159, 108, 0);
+    font-size: 1.2vw;font-weight: 500;font-family: consoles;
+}
+.code-keyword{
+    letter-spacing: 1px;
+    color: rgb(202, 121, 0);
+    font-size: 1.2vw;font-weight: 500;font-family: consoles;
+}
+.code-number{
+    letter-spacing: 1px;
+    color: rgb(158, 169, 0);
+    font-size: 1.2vw;font-weight: 500;font-family: consoles;
+}
+.code-variable{
+    letter-spacing: 1px;
+    color: rgb(231, 73, 0);
+    font-size: 1.2vw;font-weight: 500;font-family: consoles;
+}
+.code-head{
+    user-select: none;
+    color: rgb(158, 169, 0);
+    font-size: 1.2vw;font-weight: 500;font-family: consoles;
+}
+.code-headLine{
+    user-select: none;
+    color: rgb(159, 108, 0);
+    font-size: 1.2vw;font-weight: 500;font-family: consoles;
+}
